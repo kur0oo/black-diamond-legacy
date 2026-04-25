@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell Your Land — Black Diamond Legacy, LLC</title>
+  <meta name="description" content="Submit your property details and receive a fair, no-obligation cash offer from Black Diamond Legacy.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">BLACK DIAMOND <span>LEGACY</span></div>
+    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Sell Your Land</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="contact.html" class="cta-btn">Get a Cash Offer</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Submit Your Property</h1>
+    <p style="color: var(--gray-light); margin-top: 0.5rem;">Fill out the form below and we'll get back to you with a fair cash offer.</p>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section class="form-section">
+    <div class="form-container">
+
+      <!-- Success Message -->
+      <div class="form-success" id="formSuccess">
+        <h3 style="margin-bottom: 0.8rem;">Thank You!</h3>
+        <p>Your property information has been submitted. We'll review your details and get back to you within 24–48 hours with a cash offer.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: #a0d8b0;">If you don't hear from us, please check your spam folder or call us directly at <strong>(724) 201-9697</strong>.</p>
+      </div>
+
+      <form id="propertyForm" novalidate>
+
+        <h2 style="color: var(--diamond-gold); margin-bottom: 1.5rem; font-size: 1.2rem;">Property Information</h2>
+
+        <div class="form-group">
+          <label for="propertyAddress">Property Address or Location *</label>
+          <input type="text" id="propertyAddress" name="propertyAddress" placeholder="Street address, city, state, or general area" required>
+          <span class="form-error" id="error-propertyAddress">Please provide the property location.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="parcelSize">Approximate Parcel Size</label>
+          <select id="parcelSize" name="parcelSize">
+            <option value="">Select size range...</option>
+            <option value="Under 1 acre">Under 1 acre</option>
+            <option value="1–5 acres">1–5 acres</option>
+            <option value="5–10 acres">5–10 acres</option>
+            <option value="10–50 acres">10–50 acres</option>
+            <option value="50–100 acres">50–100 acres</option>
+            <option value="100+ acres">100+ acres</option>
+            <option value="Not sure">Not sure / need to verify</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="zoning">Zoning (if known)</label>
+          <select id="zoning" name="zoning">
+            <option value="">Select zoning type...</option>
+            <option value="Residential">Residential</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Agricultural">Agricultural</option>
+            <option value="Industrial">Industrial</option>
+            <option value="Mixed Use">Mixed Use</option>
+            <option value="Unzoned / Unknown">Unzoned / Unknown</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="propertyCondition">Current Property Condition</label>
+          <select id="propertyCondition" name="propertyCondition">
+            <option value="">Select condition...</option>
+            <option value="Vacant / Undeveloped">Vacant / Undeveloped</option>
+            <option value="Mostly Cleared">Mostly Cleared</option>
+            <option value="Heavily Wooded">Heavily Wooded</option>
+            <option value="Hills / Rocky Terrain">Hills / Rocky Terrain</option>
+            <option value="Near Water / Wetlands">Near Water / Wetlands</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="motivation">Why are you looking to sell? (Optional)</label>
+          <textarea id="motivation" name="motivation" placeholder="Any context helps — inherited property, financial need, relocating, etc."></textarea>
+        </div>
+
+        <!-- Divider -->
+        <hr style="border: none; border-top: 1px solid var(--gray-dark); margin: 2rem 0;">
+
+        <h2 style="color: var(--diamond-gold); margin-bottom: 1.5rem; font-size: 1.2rem;">Your Contact Information</h2>
+
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+          <span class="form-error" id="error-fullName">Please enter your name.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          <span class="form-error" id="error-email">Please enter a valid email address.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
+          <span class="form-error" id="error-phone">Please enter a valid phone number.</span>
+        </div>
+
+        <!-- A2P COMPLIANT CONSENT BOX -->
+        <div class="consent-box">
+          <h4>SMS Communication Consent (A2P Compliant)</h4>
+          <p>By checking the box below, you <strong>affirmatively consent</strong> to receive SMS text messages from Black Diamond Legacy, LLC regarding your property inquiry. Message frequency may vary. Standard msg & data rates may apply.</p>
+          <p style="margin-top: 0.5rem;">You may opt out at any time by replying <strong>STOP</strong>.</p>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="smsConsent" name="smsConsent" required>
+            <label for="smsConsent">
+              <span>I consent to receive SMS text messages</span> regarding my property inquiry from Black Diamond Legacy, LLC at the phone number provided above. I understand I can opt out at any time by replying STOP.
+            </label>
+          </div>
+          <span class="form-error" id="error-smsConsent">You must consent to SMS messaging to submit this form.</span>
+        </div>
+
+        <div class="checkbox-group" style="margin-bottom: 1.5rem;">
+          <input type="checkbox" id="contactConsent" name="contactConsent" required>
+          <label for="contactConsent">
+            I agree to receive communications from Black Diamond Legacy regarding my property. <span>(Required)</span>
+          </label>
+        </div>
+        <span class="form-error" id="error-contactConsent">You must agree to the terms to submit.</span>
+
+        <button type="submit" class="btn-primary" style="width: 100%; font-size: 1.1rem; padding: 1rem;">
+          Submit Property Info — Get My Cash Offer
+        </button>
+
+        <p style="text-align: center; color: var(--gray); font-size: 0.85rem; margin-top: 1rem;">
+          We respect your privacy. Your information will only be used to communicate about your property.
+        </p>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO -->
+  <section>
+    <h2 class="section-title">Prefer to Contact Us Directly?</h2>
+    <div class="contact-info">
+      <div class="contact-item">
+        <span>📧</span>
+        <a href="mailto:m.durstine@black-diamond-legacy.com">m.durstine@black-diamond-legacy.com</a>
+      </div>
+      <div class="contact-item">
+        <span>📞</span>
+        <a href="tel:+17242019697">(724) 201-9697</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Sell Your Land</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <p>&copy; 2026 Black Diamond Legacy, LLC. All rights reserved.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">We are not a listing service. We are private buyers.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
