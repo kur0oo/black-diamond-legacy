@@ -106,44 +106,45 @@
         </div>
 
         <div class="form-group">
-          <label for="email">Email Address *</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com">
           <span class="form-error" id="error-email">Please enter a valid email address.</span>
         </div>
 
         <div class="form-group">
-          <label for="phone">Phone Number *</label>
-          <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
           <span class="form-error" id="error-phone">Please enter a valid phone number.</span>
         </div>
 
         <!-- A2P COMPLIANT CONSENT BOX -->
         <div class="consent-box">
-          <h4>SMS Communication Consent *</h4>
-          <p>By providing your phone number and opting in, you agree to receive conversational SMS text messages from Black Diamond Legacy, LLC regarding your property inquiry, offers, updates, and follow-up communication. Message frequency varies. Message and data rates may apply. Reply STOP to opt out at any time.</p>
-         
-          <div class="checkbox-group">
+          <h4>SMS Communication Consent</h4>
+
+          <div class="checkbox-group" style="margin-bottom: 1rem;">
             <input type="checkbox" id="smsConsent" name="smsConsent">
             <label for="smsConsent">
-              <span>I consent to receive SMS text messages</span> regarding my property inquiry from Black Diamond Legacy, LLC at the phone number provided above. I understand I can opt out at any time by replying STOP. <span style="color: #e94560;">* Required</span>
+              By checking this box, I consent to receive educational, informational, and occasional marketing text messages from Black Diamond Legacy, LLC related to land buying and real estate. Messages may be sent using an automated system, CRM, or ATDS, and may include prerecorded or artificial voice messages, as well as text messages. Message frequency varies based on my interaction with the services. Message and data rates may apply. Consent is not a condition of purchase. I can opt out at any time by replying STOP, or get help by replying HELP to (724) 201-9697.
             </label>
           </div>
-          <span class="form-error" id="error-smsConsent">SMS consent is optional and is not required to submit this form or receive a cash offer..</span>
-        </div>
 
-        <div class="checkbox-group" style="margin-bottom: 1.5rem;">
-          <input type="checkbox" id="contactConsent" name="contactConsent" required>
-          <label for="contactConsent">
-            I agree to receive communications from Black Diamond Legacy regarding my property. <span>(Required)</span>
-          </label>
+          <div class="checkbox-group">
+            <input type="checkbox" id="ageConfirm" name="ageConfirm">
+            <label for="ageConfirm">
+              By checking this box, I confirm that I am using my own mobile number and email address, that I am at least 18 years old, and that I may be required to confirm my opt-in via a follow-up message. I have read and agree to the <a href="privacy.html" style="color: var(--diamond-gold);">Privacy Policy</a> and <a href="terms.html" style="color: var(--diamond-gold);">Terms of Service</a>. This consent applies even if my number is listed on a state or federal Do Not Call registry.
+            </label>
+          </div>
         </div>
-        <span class="form-error" id="error-contactConsent">You must agree to the terms to submit.</span>
 
         <button type="submit" class="btn-primary" style="width: 100%; font-size: 1.1rem; padding: 1rem;">
           Submit Property Info — Get My Cash Offer
         </button>
 
-        <p style="text-align: center; color: var(--gray); font-size: 0.85rem; margin-top: 1rem;">
+        <p style="text-align: center; color: var(--gray-light); font-size: 0.85rem; margin-top: 0.8rem;">
+          <a href="privacy.html" style="color: var(--diamond-gold);">Privacy Policy</a> | <a href="terms.html" style="color: var(--diamond-gold);">Terms of Service</a>
+        </p>
+
+        <p style="text-align: center; color: var(--gray); font-size: 0.85rem; margin-top: 0.5rem;">
           We respect your privacy. Your information will only be used to communicate about your property.
         </p>
 
