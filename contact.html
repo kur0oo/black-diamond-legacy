@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Black Diamond Legacy, LLC — We Buy Land for Cash</title>
-  <meta name="description" content="Black Diamond Legacy buys vacant land directly from property owners. No commissions, no fees, fair cash offers. Contact us today.">
+  <title>Sell Your Land — Black Diamond Legacy, LLC</title>
+  <meta name="description" content="Submit your property details and receive a fair, no-obligation cash offer from Black Diamond Legacy.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,79 +23,139 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>We Buy <span>Land</span> for Cash</h1>
-    <p class="tagline">Simple. Fair. Fast. No commissions, no fees, we cover closing costs.</p>
-    <div class="cta-group">
-      <a href="contact.html" class="btn-primary">Sell Your Land Today</a>
-      <a href="#how-it-works" class="btn-secondary">How It Works</a>
-    </div>
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Submit Your Property</h1>
+    <p style="color: var(--gray-light); margin-top: 0.5rem;">Fill out the form below and we'll get back to you with a fair cash offer.</p>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="how-it-works" id="how-it-works">
-    <h2 class="section-title">How It Works</h2>
-    <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-number">1</div>
-        <h3>Contact Us</h3>
-        <p>Fill out the form or call us directly with your property details. There's no obligation.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">2</div>
-        <h3>Receive Your Offer</h3>
-        <p>We review your property and send you a fair, no-obligation cash offer — usually within 24–48 hours.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">3</div>
-        <h3>Close Fast</h3>
-        <p>Accept the offer and we close on your timeline. You get paid — we handle the rest.</p>
-      </div>
-    </div>
-  </section>
+  <!-- FORM SECTION -->
+  <section class="form-section">
+    <div class="form-container">
 
-  <!-- WHY US -->
-  <section>
-    <h2 class="section-title">Why Work With Us?</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <h3>No Commissions or Fees</h3>
-        <p>Keep every dollar of your sale. We don't charge any fees or take a cut of your proceeds.</p>
+      <!-- Success Message -->
+      <div class="form-success" id="formSuccess">
+        <h3 style="margin-bottom: 0.8rem;">Thank You!</h3>
+        <p>Your property information has been submitted. We'll review your details and get back to you within 24–48 hours with a cash offer.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: #a0d8b0;">If you don't hear from us, please check your spam folder or call us directly at <strong>(724) 201-9697</strong>.</p>
       </div>
-      <div class="feature-card">
-        <h3>We Cover Closing Costs</h3>
-        <p>You walk away with the full offer amount. We take care of title, escrow, and closing costs.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Any Condition, Any Location</h3>
-        <p>Vacant land, underdeveloped plots, remote acreage — we buy properties others won't consider.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Fast Closings</h3>
-        <p>We can close in as little as 7 days. No waiting months for a traditional buyer.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Direct Communication</h3>
-        <p>You deal directly with us — no middlemen, no agents, no runaround.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Simple Process</h3>
-        <p>Just tell us about your property. We do the rest. No repairs, no clean-up, no hassle.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- CTA -->
-  <section class="form-section" style="text-align: center;">
-    <h2 class="section-title">Ready to Sell Your Land?</h2>
-    <p style="color: var(--gray-light); margin-bottom: 2rem; font-size: 1.1rem;">Get a fair, no-obligation cash offer today. It only takes a few minutes.</p>
-    <a href="contact.html" class="btn-primary">Submit Your Property Info</a>
+      <form id="propertyForm" novalidate>
+
+        <h2 style="color: var(--diamond-gold); margin-bottom: 1.5rem; font-size: 1.2rem;">Property Information</h2>
+
+        <div class="form-group">
+          <label for="propertyAddress">Property Address or Location *</label>
+          <input type="text" id="propertyAddress" name="propertyAddress" placeholder="Street address, city, state, or general area" required>
+          <span class="form-error" id="error-propertyAddress">Please provide the property location.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="parcelSize">Approximate Parcel Size</label>
+          <select id="parcelSize" name="parcelSize">
+            <option value="">Select size range...</option>
+            <option value="Under 1 acre">Under 1 acre</option>
+            <option value="1–5 acres">1–5 acres</option>
+            <option value="5–10 acres">5–10 acres</option>
+            <option value="10–50 acres">10–50 acres</option>
+            <option value="50–100 acres">50–100 acres</option>
+            <option value="100+ acres">100+ acres</option>
+            <option value="Not sure">Not sure / need to verify</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="zoning">Zoning (if known)</label>
+          <select id="zoning" name="zoning">
+            <option value="">Select zoning type...</option>
+            <option value="Residential">Residential</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Agricultural">Agricultural</option>
+            <option value="Industrial">Industrial</option>
+            <option value="Mixed Use">Mixed Use</option>
+            <option value="Unzoned / Unknown">Unzoned / Unknown</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="propertyCondition">Current Property Condition</label>
+          <select id="propertyCondition" name="propertyCondition">
+            <option value="">Select condition...</option>
+            <option value="Vacant / Undeveloped">Vacant / Undeveloped</option>
+            <option value="Mostly Cleared">Mostly Cleared</option>
+            <option value="Heavily Wooded">Heavily Wooded</option>
+            <option value="Hills / Rocky Terrain">Hills / Rocky Terrain</option>
+            <option value="Near Water / Wetlands">Near Water / Wetlands</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="motivation">Why are you looking to sell? (Optional)</label>
+          <textarea id="motivation" name="motivation" placeholder="Any context helps — inherited property, financial need, relocating, etc."></textarea>
+        </div>
+
+        <!-- Divider -->
+        <hr style="border: none; border-top: 1px solid var(--gray-dark); margin: 2rem 0;">
+
+        <h2 style="color: var(--diamond-gold); margin-bottom: 1.5rem; font-size: 1.2rem;">Your Contact Information</h2>
+
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+          <span class="form-error" id="error-fullName">Please enter your name.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com">
+          <span class="form-error" id="error-email">Please enter a valid email address.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+          <span class="form-error" id="error-phone">Please enter a valid phone number.</span>
+        </div>
+
+        <!-- A2P COMPLIANT CONSENT BOX -->
+        <div class="consent-box">
+          <h4>SMS Communication Consent</h4>
+
+          <div class="checkbox-group" style="margin-bottom: 1rem;">
+            <input type="checkbox" id="smsConsent" name="smsConsent">
+            <label for="smsConsent">
+              By checking this box, I agree to receive SMS/text messages from Black Diamond Legacy, LLC about my property inquiry, including inquiry confirmations, follow-up questions, appointment coordination, offer updates, and occasional land buying updates. Message frequency varies, typically 3-5 messages per month. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is not a condition of purchase.
+            </label>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="ageConfirm" name="ageConfirm">
+            <label for="ageConfirm">
+             By checking this box, I confirm that I am using my own mobile number and email address, that I am at least 18 years old, and that I have read and agree to the <a href="privacy.html" style="color: var(--diamond-gold);">Privacy Policy</a> and <a href="terms.html" style="color: var(--diamond-gold);">Terms of Service</a>.
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; font-size: 1.1rem; padding: 1rem;">
+          Submit Property Info — Get My Cash Offer
+        </button>
+
+        <p style="text-align: center; color: var(--gray-light); font-size: 0.85rem; margin-top: 0.8rem;">
+          <a href="privacy.html" style="color: var(--diamond-gold);">Privacy Policy</a> | <a href="terms.html" style="color: var(--diamond-gold);">Terms of Service</a>
+        </p>
+
+        <p style="text-align: center; color: var(--gray); font-size: 0.85rem; margin-top: 0.5rem;">
+          We respect your privacy. Your information will only be used to communicate about your property.
+        </p>
+
+      </form>
+    </div>
   </section>
 
   <!-- CONTACT INFO -->
   <section>
-    <h2 class="section-title">Get in Touch</h2>
+    <h2 class="section-title">Prefer to Contact Us Directly?</h2>
     <div class="contact-info">
       <div class="contact-item">
         <span>📧</span>
@@ -128,5 +188,6 @@
     <p style="margin-top: 0.5rem; font-size: 0.8rem;">We are not a listing service. We are private buyers.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
