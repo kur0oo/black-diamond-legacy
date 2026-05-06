@@ -418,7 +418,6 @@ section {
 footer {
   background: var(--black);
   padding: 2rem;
-  text-align: center;
   border-top: 2px solid var(--diamond-gold);
   color: var(--gray);
   font-size: 0.9rem;
@@ -431,13 +430,6 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 1rem;
 }
 
 /* RESPONSIVE */
@@ -467,6 +459,19 @@ footer a:hover {
   .footer-links {
     flex-direction: column;
     gap: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    text-align: center;
+  }
+  footer > div {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  footer > div > div:last-child {
+    text-align: center !important;
   }
 }
 
